@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Text,
-  View,
-  SafeAreaView,
-  StyleSheet,
-  Platform,
-  StatusBar,
-} from "react-native";
+import { SafeAreaView, StyleSheet, Platform, StatusBar } from "react-native";
 import Constants from "expo-constants";
 
 import { Focus } from "./src/features/Focus";
