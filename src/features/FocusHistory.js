@@ -1,11 +1,16 @@
-import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 
-import { colors } from '../utils/colors';
-import { spacing, fontSizes } from '../utils/sizes';
+import { colors } from "../utils/colors";
+import { spacing, fontSizes } from "../utils/sizes";
 
 export const FocusHistory = ({ history }) => {
-  if (!history || !history.length) return <Text style={styles.title}> You haven't focused on anything yet. </Text>;
+  if (!history || !history.length)
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}> You haven't focused on anything yet. </Text>
+      </View>
+    );
 
   const renderItem = ({ item }) => <Text style={styles.item}>✓ {item}</Text>;
 
@@ -31,6 +36,6 @@ const styles = StyleSheet.create({
   title: {
     color: colors.blueGrey,
     fontSize: fontSizes.md,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
